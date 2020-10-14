@@ -1,0 +1,111 @@
+﻿/*
+* {
+    border: 1px solid black;
+}
+*/
+#container {
+    width: 80%;
+    min-width: 800px;
+    margin: 0px auto;
+}
+
+header {
+    height: 200px;
+    border-bottom: 1px solid #393939;
+}
+
+main {
+
+}
+
+nav {
+    width: 15%;
+    min-width: 150px;
+    float: left;
+    min-height:500px;
+}
+
+    nav ul {
+        list-style-type: none;
+        padding: 10px 0px 0px 10px;
+    }
+
+    nav a:hover , footer a:hover {
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+content {
+    width: 65%;
+    min-width: 450px;
+    float: left;
+    min-height: 500px;
+    border-left: 1px solid #393939;
+    border-right: 1px solid #393939;
+    padding: 20px 10px 10px 10px;
+}
+
+aside {
+    width: 20%;
+    min-width: 200px;
+    float: right;
+    min-height: 500px;
+}
+
+footer {
+    height: 40px;
+    clear: both;
+    border-top: 1px solid #393939;
+    text-align: right;
+    padding-top: 10px;
+}
+
+    footer ul {
+        list-style-type: none;
+        padding 0px;
+    }
+
+        footer ul li {
+            display: inline;
+            letter-spacing: 6px;
+            padding: 10px;
+        }
+
+.level1 {
+
+}
+
+.level2 {
+    font-size: 85%;
+    padding-left: 15px;
+}
+
+/*
+    alle Tabellen einheitlich formatieren
+*/
+
+table {
+    
+}
+
+    table td {
+        padding: 5px;
+    }
+
+thead {
+    line-height: 200%;
+    text-align: center;
+    font-weight: bold;
+    background-color: #9692ff;
+}
+
+tfoot {
+    font-size: 80%;
+    text-align: right;
+    line-height: 200%;
+}
+
+    tfoot tr td {
+        padding-top: 5px;
+        padding-right: 7px;
+    }
