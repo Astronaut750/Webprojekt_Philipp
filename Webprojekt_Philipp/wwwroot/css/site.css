@@ -12,7 +12,29 @@
 header {
     height: 200px;
     border-bottom: 1px solid #393939;
+    position: relative;
+    text-align: center;
+    color: black;
 }
+
+    header img {
+        height: 100%;
+        width: 100%;
+    }
+
+    header div {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-weight: bolder;
+        font-size: 100px;
+    }
+
+    header #white {
+        color: white;
+        font-size: 101px;
+    }
 
 main {
 
