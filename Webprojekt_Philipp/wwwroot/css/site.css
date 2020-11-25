@@ -61,7 +61,7 @@ content {
     width: 65%;
     min-width: 450px;
     float: left;
-    min-height: 500px;
+    min-height: 700px;
     border-left: 1px solid #393939;
     border-right: 1px solid #393939;
     padding: 20px 10px 10px 10px;
@@ -73,6 +73,15 @@ aside {
     float: right;
     min-height: 500px;
 }
+
+    .icon {
+        height: 50px;
+        width: 50px;
+    }
+
+    .social {
+        margin: 10px;
+    }
 
 footer {
     height: 40px;
