@@ -1,0 +1,38 @@
+﻿
+@{
+    ViewData["Title"] = "Header";
+}
+
+<ul>
+    <li class="logo rounded-lg">
+        <a asp-controller="home" asp-action="index">
+            <img src="~/img/skateboard.png" id="skateboardIcon" />
+        </a>
+    </li>
+    <li class="menu rounded-lg" id="brandtext">
+        <a asp-controller="home" asp-action="index">
+            <div>skate<inline class="font-weight-bold">MANIA</inline></div>
+        </a>
+    </li>
+    <li class="menu rounded-lg dropdown">
+        <a asp-controller="shop" asp-action="index" class="dropbtn">Shop</a>
+        <div class="dropdown-content rounded-lg">
+            <a asp-controller="shop" asp-action="createNewArticle" class="rounded-lg dropdowntext">Neuer Artikel</a>
+            <a asp-controller="shop" asp-action="refund" class="rounded-lg dropdowntext">Rücksendung</a>
+        </div>
+    </li>
+    <li class="menu rounded-lg dropdown">
+        <a asp-controller="user" asp-action="index" class="dropbtn">Account</a>
+        <div class="dropdown-content rounded-lg">
+            <div style="height: 200px;">
+            </div>
+        </div>
+    </li>
+    <li class="menu rounded-lg dropdown">
+        <a asp-controller="support" asp-action="index" class="dropbtn">Support</a>
+        <div class="dropdown-content rounded-lg">
+            <a asp-controller="support" asp-action="aboutus" class="rounded-lg dropdowntext">Über uns</a>
+            <a asp-controller="support" asp-action="contact" class="rounded-lg dropdowntext">Kontakt &amp; Feedback</a>
+        </div>
+    </li>
+</ul>

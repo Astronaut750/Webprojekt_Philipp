@@ -1,0 +1,89 @@
+﻿header {
+    height: 100px;
+    background-color: #303030;
+    width: 1060px;
+    margin: auto;
+}
+
+ul {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    overflow: visible;
+}
+
+a:link, a:visited {
+    color: white;
+    text-decoration: none;
+}
+
+#brandtext {
+    font-size: 34px;
+}
+
+.logo {
+    background-color: #202020;
+    margin: 10px;
+    float: left;
+}
+
+.menu {
+    font-size: 32px;
+    line-height: 50px;
+    text-align: center;
+    margin: 10px;
+    margin-top: 25px;
+    width: 220px;
+    height: 50px;
+    background-color: #202020;
+    float: left;
+}
+
+    .menu:hover, .logo:hover {
+        background-color: #101010;
+    }
+
+#skateboardIcon {
+    margin: 10px;
+    height: 60px;
+    -webkit-filter: invert(1);
+    filter: invert(1);
+}
+
+main {
+    min-height: 700px;
+}
+
+footer {
+    height: 100px;
+    background-color: #e0e0e0;
+}
+
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #505050;
+    width: 220px;
+}
+
+    .dropdown-content a {
+        color: white;
+        text-decoration: none;
+        display: block;
+    }
+
+        .dropdown-content a:hover {
+            background-color: #404040;
+        }
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdowntext {
+    text-align: center;
+    line-height: 20px;
+    padding: 5px;
+    font-size: 20px;
+}
