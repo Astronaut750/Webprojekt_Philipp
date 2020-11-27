@@ -1,8 +1,20 @@
-﻿header {
+﻿/*
+    #0B0C10
+    #1F2833
+    #C5C6C7
+    #66FCF1
+    #45A29E
+*/
+
+
+
+
+header {
     height: 100px;
-    background-color: #303030;
-    width: 1060px;
+    background-color: #1f2833;
+    width: 1064px;
     margin: auto;
+    margin-top: 10px;
 }
 
 ul {
@@ -13,7 +25,7 @@ ul {
 }
 
 a:link, a:visited {
-    color:white;
+    color: white;
     text-decoration: none;
 }
 
@@ -22,9 +34,10 @@ a:link, a:visited {
 }
 
 .logo {
-    background-color: #202020;
+    background-color: #1f2833;
     margin: 10px;
     float: left;
+    border: 2px solid #45a29e;
 }
 
 .menu {
@@ -35,12 +48,14 @@ a:link, a:visited {
     margin-top: 25px;
     width: 220px;
     height: 50px;
-    background-color: #202020;
+    background-color: #1f2833;
     float: left;
+    border: 2px solid #45a29e;
 }
 
-    .menu:hover, .logo:hover{
+    .menu:hover, .logo:hover {
         background-color: #101010;
+        border-color: #66FCF1;
     }
 
 #skateboardIcon {
@@ -52,19 +67,26 @@ a:link, a:visited {
 
 main {
     min-height: 700px;
+    background-color: white;
+    border: 5px solid #1f2833;
+    margin-top: 10px;
 }
 
 footer {
-    height: 100px;
-    background-color: #e0e0e0;
+    min-height: 200px;
+    background-color: white;
+    border: 5px solid #1f2833;
+    margin-top: 10px;
 }
 
 
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #505050;
+    background-color: #1f2833;
     width: 220px;
+    border: 2px solid #45a29e;
+    left: -2px;
 }
 
     .dropdown-content a {
@@ -74,7 +96,7 @@ footer {
     }
 
         .dropdown-content a:hover {
-            background-color: #404040;
+            background-color: #0b0c10;
         }
 
 .dropdown:hover .dropdown-content {
@@ -86,4 +108,56 @@ footer {
     line-height: 20px;
     padding: 5px;
     font-size: 20px;
+}
+
+body {
+    background-attachment: fixed;
+    position: sticky;
+    height: 900px;
+    background-image: url(../wwwroot/img/background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.paymentImage {
+    display: block;
+    margin: 0;
+    position: absolute;
+    top: 70px;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    width: 120px;
+}
+
+.paymentText {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#paypal {
+    width: 150px;
+}
+
+#bitcoin {
+    width: 90px;
+}
+
+.links {
+    height: 30px;
+    text-align: center;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+    .links div a {
+        background-color: #1F2833;
+        border: 5px solid #1F2833;
+    }
+
+.paymentTextLinks {
+    margin-top: 150px;
+    font-size: 20px;
+    font-weight: bold;
 }

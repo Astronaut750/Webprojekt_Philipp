@@ -1,8 +1,10 @@
-﻿<!DOCTYPE html>
-<html>
+﻿
+<!DOCTYPE html>
+<html lang="de-at">
 <head>
     <meta charset="utf-8" />
-    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home Page - Skateshop</title>
     <link rel="stylesheet" href="bootstrap.min.css" />
     <link rel="stylesheet" href="style.css" />
 </head>
@@ -11,44 +13,75 @@
         <header class="rounded-lg">
             <ul>
                 <li class="logo rounded-lg">
-                    <a href="./index.html">
+                    <a href="/">
                         <img src="../wwwroot/img/skateboard.png" id="skateboardIcon" />
                     </a>
                 </li>
                 <li class="menu rounded-lg" id="brandtext">
-                    <a href="./index.html">
-                        <div>skate<inline class="font-weight-bold">MANIA</inline></div>
+                    <a href="/">
+                        <div>Skate<inline class="font-weight-bold">MANIA</inline></div>
                     </a>
                 </li>
                 <li class="menu rounded-lg dropdown">
-                    <a href="./index.html" class="dropbtn">Shop</a>
+                    <a class="dropbtn" href="/shop">Shop</a>
                     <div class="dropdown-content rounded-lg">
-                        <a href="#" class="rounded-lg dropdowntext">Neuer Artikel</a>
-                        <a href="#" class="rounded-lg dropdowntext">Rücksendung</a>
+                        <a class="rounded-lg dropdowntext" href="/shop/createNewArticle">Neuer Artikel</a>
+                        <a class="rounded-lg dropdowntext" href="/shop/refund">Rücksendung</a>
                     </div>
                 </li>
                 <li class="menu rounded-lg dropdown">
-                    <a href="./index.html" class="dropbtn">Account</a>
+                    <a class="dropbtn" href="/user">Account</a>
                     <div class="dropdown-content rounded-lg">
                         <div style="height: 200px;">
                         </div>
                     </div>
                 </li>
                 <li class="menu rounded-lg dropdown">
-                    <a href="./index.html" class="dropbtn">Support</a>
+                    <a class="dropbtn" href="/support">Support</a>
                     <div class="dropdown-content rounded-lg">
-                        <a href="#" class="rounded-lg dropdowntext">Über uns</a>
-                        <a href="#" class="rounded-lg dropdowntext">Kontakt</a>
+                        <a class="rounded-lg dropdowntext" href="/support/aboutus">Über uns</a>
+                        <a class="rounded-lg dropdowntext" href="/support/contact">Kontakt &amp; Feedback</a>
                     </div>
                 </li>
             </ul>
         </header>
-        <main>
-            test
+        <main class="rounded-lg">
+
+
+            <div class="container">
+                Lorem ipsum dolor sit amet, consectetur<br /> adipiscing elit porta. <br />S Fusc<br />e sagittis, libero et lacinia blandit, sa<br />pien metus mollis <br />sem, eu varius tellus magna et elit. Nunc vel ipsum vestibulum velit laoreet luctus. In auctor ultricies mauris vel dapibus. Aliquam erat volutpat. Sed quis massa non urna maximus gravida. Quisque bibendum neque nec dolor consectetur, ut vehicula justo faucibus. Fusce mi velit, finibus in volutpat nec, efficitur eget nisi. Ut vehicula magna interdum hendrerit interdum. Sed tempor sapien nec odio consectetur gravida. Morbi velit nibh, elementum eget orci in, placerat ullamcorper felis. Aenean congue ornare pharetra. Proin enim elit, ullamcorper non maximus vel, gravida quis neque.
+
+                In eget ante in tellus phar<br />etra rhoncus. Nam pharetra, l<br />ectus vel matt<br />is maximus, mauris sem facilisis lacus, sit<br /> amet mattis ligula nulla non risus. Vivamus vel ullamcorper ante, ut tristique sem. Integer ut augue feugiat, egestas nibh laoreet, gravida metus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aenean sit amet cursus ipsum. Donec pulvinar non tellus et feugiat. Sed est justo, gravida nec erat in, aliquam cursus dolor. Donec posuere aliquam vestibulum. Suspendisse convallis consectetur elit eu lobortis. Sed pellentesque nibh pretium finibus efficitur. Aliquam quis varius turpis, vitae convallis lorem.
+            </div>
         </main>
-        <footer>
-            
+        <footer class="rounded-lg">
+            <div class="container">
+                <div class="paymentText">Zahlungsmöglichkeiten bei uns im Shop: </div>
+                <div class="row">
+                    <div class="col-lg-1"></div>
+                    <div class="col-lg-2"><a href="https://www.paypal.com/at/home"><img id="paypal" class="paymentImage" src="../wwwroot/img/paypal.png"/></a></div>
+                    <div class="col-lg-2"><a href="https://www.klarna.com/at/"><img class="paymentImage" src="../wwwroot/img/klarna.png" /></a></div>
+                    <div class="col-lg-2"><a href="https://pay.google.com/"><img class="paymentImage" src="../wwwroot/img/googlepay.png" /></a></div>
+                    <div class="col-lg-2"><a href="https://www.apple.com/apple-pay/"><img class="paymentImage" src="../wwwroot/img/applepay.png" /></a></div>
+                    <div class="col-lg-2"><a href="https://bitcoin.org/en/"><img id="bitcoin" class="paymentImage" src="../wwwroot/img/bitcoin.png" /></a></div>
+                    <div class="col-lg-1"></div>
+                </div>
+                <div class="paymentTextLinks">Weitere Links: </div>
+                <div class="row links rounded-lg">
+                    <div class="col-lg-4"><a class="rounded-lg" href="index.html">Support &amp; Feedback</a></div>
+                    <div class="col-lg-4"><a class="rounded-lg" href="index.html">Über uns &amp; Impressum</a></div>
+                    <div class="col-lg-4"><a class="rounded-lg" href="index.html">Quellen</a></div>
+                </div>
+                <br />
+                <div class="paymentText">
+                    &#169; SkateMANIA 2020
+                </div>
+            </div>
         </footer>
+        <br />
     </div>
+    <script src="/lib/jquery/dist/jquery.min.js"></script>
+    <script src="/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/site.js?v=8ZRc1sGeVrPBx4lD717BgRaQekyh78QKV9SKsdt638U"></script>
 </body>
 </html>
