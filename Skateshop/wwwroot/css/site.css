@@ -55,6 +55,7 @@ a:link, a:visited {
 
     .menu:hover, .logo:hover {
         background-color: #101010;
+        border-color: #66FCF1;
     }
 
 #skateboardIcon {
@@ -68,17 +69,14 @@ main {
     min-height: 700px;
     background-color: white;
     border: 5px solid #1f2833;
+    margin-top: 10px;
 }
 
 footer {
-    height: 100px;
+    min-height: 200px;
     background-color: white;
     border: 5px solid #1f2833;
-    border-top: none;
-    width: 80%;
-    margin: auto;
-    border-bottom-right-radius: 0.3rem;
-    border-bottom-left-radius: 0.3rem;
+    margin-top: 10px;
 }
 
 
@@ -116,7 +114,50 @@ body {
     background-attachment: fixed;
     position: sticky;
     height: 900px;
-    background-image: repeating-linear-gradient(#0B0C10, #1F2833, #0B0C10, #1F2833, #0B0C10);
+    background-image: url(../img/background.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+.paymentImage {
+    display: block;
+    margin: 0;
+    position: absolute;
+    top: 70px;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    width: 120px;
+}
+
+.paymentText {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#paypal {
+    width: 150px;
+}
+
+#bitcoin {
+    width: 90px;
+}
+
+.links {
+    height: 30px;
+    text-align: center;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+    .links div a {
+        background-color: #1F2833;
+        border: 5px solid #1F2833;
+    }
+
+.paymentTextLinks {
+    margin-top: 150px;
+    font-size: 20px;
+    font-weight: bold;
 }

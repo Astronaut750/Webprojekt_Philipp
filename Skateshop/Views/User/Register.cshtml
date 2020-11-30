@@ -1,0 +1,53 @@
+﻿@model Skateshop.Models.User
+
+@{
+    ViewData["Title"] = "Register";
+}
+
+<form asp-controller="user" asp-action="register" method="post">
+    <h2>Registrierung:</h2><br />
+
+    <label asp-for="Firstname">Vorname *</label>
+    <input asp-for="Firstname" />
+    <span asp-validation-for="Firstname" class="text-danger" style="font-size:85%"></span><br />
+
+    <label asp-for="Lastname">Nachname *</label>
+    <input asp-for="Lastname" />
+    <span asp-validation-for="Lastname" class="text-danger" style="font-size:85%"></span><br />
+
+    <label asp-for="Email">Email *</label>
+    <input asp-for="Email" />
+    <span asp-validation-for="Email" class="text-danger" style="font-size:85%"></span><br />
+
+    <label asp-for="Birthdate">Geburtstag *</label>
+    <input asp-for="Birthdate" type="date" value="" />
+    <span asp-validation-for="Birthdate" class="text-danger" style="font-size:85%"></span><br />
+    <br />
+    <h4>Adresse:</h4>
+    <label asp-for="Street">Straße *</label>
+    <input asp-for="Street" />
+    <span asp-validation-for="Street" class="text-danger" style="font-size:85%"></span><br />
+
+    <label asp-for="StreetNumber">Hausnummer *</label>
+    <input asp-for="StreetNumber" />
+    <span asp-validation-for="StreetNumber" class="text-danger" style="font-size:85%"></span><br />
+
+    <label asp-for="Zipcode">Postleitzahl *</label>
+    <input asp-for="Zipcode" />
+    <span asp-validation-for="Zipcode" class="text-danger" style="font-size:85%"></span><br />
+
+    <label asp-for="City">Stadt *</label>
+    <input asp-for="City" />
+    <span asp-validation-for="City" class="text-danger" style="font-size:85%"></span><br />
+
+    <label asp-for="State">Staat *</label>
+    <select asp-for="State">
+        <option value="notSpecified">bitte auswählen</option>
+        <option value="Österreich">Österreich</option>
+        <option value="Deutschland">Deutschland</option>
+        <option value="Schweiz">Schweiz</option>
+    </select>
+    <span asp-validation-for="State" class="text-danger" style="font-size:85%"></span><br />
+
+    <input type="submit" value="Registrieren" />
+</form>

@@ -12,5 +12,15 @@ namespace Skateshop.Controllers
         {
             return View();
         }
+
+        public IActionResult createNewArticle()
+        {
+            return View();
+        }
+
+        public IActionResult Refund()
+        {
+            return View();
+        }
     }
 }
