@@ -4,50 +4,67 @@
     ViewData["Title"] = "Register";
 }
 
+
+
 <form asp-controller="user" asp-action="register" method="post">
-    <h2>Registrierung:</h2><br />
+    <h2 class="titleRegister" id="register">Registrieren:</h2>
 
-    <label asp-for="Firstname">Vorname *</label>
-    <input asp-for="Firstname" />
-    <span asp-validation-for="Firstname" class="text-danger" style="font-size:85%"></span><br />
+    <div class="registerHalf">
+        <ul>
+            <li><label asp-for="Firstname" class="labelReg">Vorname *</label></li>
+            <li><label asp-for="Lastname" class="labelReg">Nachname *</label></li>
+            <li><label asp-for="Email" class="labelReg">Email *</label></li>
+            <li><label asp-for="Birthdate" class="labelReg marginbottom10">Geburtstag *</label></li>
+        </ul>
+    </div>
 
-    <label asp-for="Lastname">Nachname *</label>
-    <input asp-for="Lastname" />
-    <span asp-validation-for="Lastname" class="text-danger" style="font-size:85%"></span><br />
+    <div class="registerHalf">
+        <input asp-for="Firstname" class="inputReg" />
+        <span asp-validation-for="Firstname" class="text-danger" style="font-size:85%"></span><br />
 
-    <label asp-for="Email">Email *</label>
-    <input asp-for="Email" />
-    <span asp-validation-for="Email" class="text-danger" style="font-size:85%"></span><br />
+        <input asp-for="Lastname" class="inputReg" />
+        <span asp-validation-for="Lastname" class="text-danger" style="font-size:85%"></span><br />
 
-    <label asp-for="Birthdate">Geburtstag *</label>
-    <input asp-for="Birthdate" type="date" value="" />
-    <span asp-validation-for="Birthdate" class="text-danger" style="font-size:85%"></span><br />
+        <input asp-for="Email" class="inputReg" />
+        <span asp-validation-for="Email" class="text-danger" style="font-size:85%"></span><br />
+
+        <input asp-for="Birthdate" type="date" value="" class="inputReg marginbottom10" />
+        <span asp-validation-for="Birthdate" class="text-danger" style="font-size:85%"></span><br />
+    </div>
     <br />
-    <h4>Adresse:</h4>
-    <label asp-for="Street">Straße *</label>
-    <input asp-for="Street" />
-    <span asp-validation-for="Street" class="text-danger" style="font-size:85%"></span><br />
+    <h4 class="titleRegister">Adresse (optional):</h4>
 
-    <label asp-for="StreetNumber">Hausnummer *</label>
-    <input asp-for="StreetNumber" />
-    <span asp-validation-for="StreetNumber" class="text-danger" style="font-size:85%"></span><br />
+    <div class="registerHalf">
+        <ul>
+            <li><label asp-for="Street" class="labelReg">Straße</label></li>
+            <li><label asp-for="StreetNumber" class="labelReg">Hausnummer</label></li>
+            <li><label asp-for="Zipcode" class="labelReg">Postleitzahl</label></li>
+            <li><label asp-for="City" class="labelReg">Stadt</label></li>
+            <li><label asp-for="State" class="labelReg marginbottom11">Staat</label></li>
+        </ul>
+    </div>
 
-    <label asp-for="Zipcode">Postleitzahl *</label>
-    <input asp-for="Zipcode" />
-    <span asp-validation-for="Zipcode" class="text-danger" style="font-size:85%"></span><br />
+    <div class="registerHalf">
+        <input asp-for="Street" class="inputReg" />
+        <span asp-validation-for="Street" class="text-danger" style="font-size:85%"></span><br />
 
-    <label asp-for="City">Stadt *</label>
-    <input asp-for="City" />
-    <span asp-validation-for="City" class="text-danger" style="font-size:85%"></span><br />
+        <input asp-for="StreetNumber" class="inputReg" />
+        <span asp-validation-for="StreetNumber" class="text-danger" style="font-size:85%"></span><br />
 
-    <label asp-for="State">Staat *</label>
-    <select asp-for="State">
-        <option value="notSpecified">bitte auswählen</option>
-        <option value="Österreich">Österreich</option>
-        <option value="Deutschland">Deutschland</option>
-        <option value="Schweiz">Schweiz</option>
-    </select>
-    <span asp-validation-for="State" class="text-danger" style="font-size:85%"></span><br />
+        <input asp-for="Zipcode" class="inputReg" />
+        <span asp-validation-for="Zipcode" class="text-danger" style="font-size:85%"></span><br />
 
-    <input type="submit" value="Registrieren" />
+        <input asp-for="City" class="inputReg" />
+        <span asp-validation-for="City" class="text-danger" style="font-size:85%"></span><br />
+
+        <select asp-for="State" class="inputReg marginbottom10">
+            <option value="notSpecified">bitte auswählen</option>
+            <option value="Österreich">Österreich</option>
+            <option value="Deutschland">Deutschland</option>
+            <option value="Schweiz">Schweiz</option>
+        </select>
+        <span asp-validation-for="State" class="text-danger" style="font-size:85%"></span><br />
+    </div>
+
+    <input type="submit" value="Registrieren" class="titleRegister"/>
 </form>

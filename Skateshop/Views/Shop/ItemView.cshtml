@@ -1,0 +1,22 @@
+﻿@using Skateshop.Models
+@model Item
+
+@{
+    string imagePath = "/img/shop/" + Model.Image;
+}
+
+<div class="griditem rounded-sm">
+    <div class="itemTitle itemText">
+        @Model.Manufacturer
+        @Model.ItemType
+    </div>
+    <div>
+        <img src="@imagePath" class="itemImg" />
+    </div>
+    <div class="itemPrice itemText">
+        @Model.Price EUR
+    </div>
+    <div class="itemText">
+        @Model.Description @Model.Size
+    </div>
+</div>

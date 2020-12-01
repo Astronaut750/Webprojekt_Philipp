@@ -67,6 +67,50 @@ namespace Skateshop.Controllers
             {
                 ModelState.AddModelError(nameof(Models.User.Birthdate), "Datum vor 1900!");
             }
+
+
+            if(!IsAddressDataEmpty(u.Street, u.StreetNumber, u.Zipcode, u.City, u.State) && IsStringEmpty(u.Street))
+            {
+                ModelState.AddModelError(nameof(Models.User.Street), "Die Addresse ist unvollständig! Straße fehlt!");
+            }
+
+            if(!IsAddressDataEmpty(u.Street, u.StreetNumber, u.Zipcode, u.City, u.State) && IsStringEmpty(u.StreetNumber))
+            {
+                ModelState.AddModelError(nameof(Models.User.StreetNumber), "Die Addresse ist unvollständig! Hausnummer fehlt!");
+            }
+
+            if(!IsAddressDataEmpty(u.Street, u.StreetNumber, u.Zipcode, u.City, u.State) && IsStringEmpty(u.Zipcode))
+            {
+                ModelState.AddModelError(nameof(Models.User.Zipcode), "Die Addresse ist unvollständig! Postleitzahl fehlt!");
+            }
+
+            if(!IsAddressDataEmpty(u.Street, u.StreetNumber, u.Zipcode, u.City, u.State) && IsStringEmpty(u.City))
+            {
+                ModelState.AddModelError(nameof(Models.User.City), "Die Addresse ist unvollständig! Stadt fehlt!");
+            }
+
+            if(!IsAddressDataEmpty(u.Street, u.StreetNumber, u.Zipcode, u.City, u.State) && u.State == State.notSpecified)
+            {
+                ModelState.AddModelError(nameof(Models.User.State), "Die Addresse ist unvollständig! Staat fehlt!");
+            }
+        }
+
+        static bool IsAddressDataEmpty(string street, string streetNumber, string zipcode, string city, State state)
+        {
+            if(IsStringEmpty(street) && IsStringEmpty(streetNumber) && IsStringEmpty(zipcode) && IsStringEmpty(city) && state == State.notSpecified)
+            {
+                return true;
+            }
+            return false;
+        }
+
+        static bool IsStringEmpty(string s)
+        {
+            if(s == null || s == "")
+            {
+                return true;
+            }
+            return false;
         }
 
         static bool IsValidEmail(string email)

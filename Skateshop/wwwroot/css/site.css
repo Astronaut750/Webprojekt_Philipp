@@ -6,9 +6,6 @@
     #45A29E
 */
 
-
-
-
 header {
     height: 100px;
     background-color: #1f2833;
@@ -160,4 +157,87 @@ body {
     margin-top: 150px;
     font-size: 20px;
     font-weight: bold;
+}
+
+.registerHalf {
+    width: 50%;
+    float: left;
+    display: inline-block;
+    position: relative;
+}
+
+.registerHalf ul li {
+    display: block;
+    text-align: right;
+}
+
+.labelReg {
+    display: inline-block;
+    margin: 3px 3px 5px 0;
+}
+
+.inputReg {
+    display: inline-block;
+    margin-bottom: 2px;
+    padding: 1px 2px;
+    width: 174px;
+}
+
+.titleRegister {
+    text-align: center;
+}
+
+#register {
+    margin-top: 50px;
+}
+
+.marginbottom10 {
+    margin-bottom: 10px;
+}
+
+.marginbottom11 {
+    margin-bottom: 11px;
+}
+
+.gridcontainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    height: 100%;
+    grid-gap: 10px;
+    padding: 10px;
+}
+
+.griditem {
+    border: 1px solid black;
+    height: auto;
+    display: grid;
+    grid-template-rows: .5fr 5fr .5fr .5fr;
+}
+
+.itemImg {
+    width: 100%;
+    padding: 5px 0;
+    border-top: 1px dashed black;
+    border-bottom: 1px dashed black;
+}
+
+.source:link, .source:visited {
+    font-size: 15px;
+    color: black;
+}
+
+.itemPrice {
+    text-decoration: underline;
+}
+
+.itemText {
+    font-size: 20px;
+    text-align: center;
+}
+
+.itemTitle {
+    font-size: 30px;
+    padding-left: 2px;
+    font-weight: bold;
+    height: 100%;
 }
