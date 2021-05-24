@@ -1,0 +1,19 @@
+﻿@model Skateshop.Models.Message
+
+@if(Model == null)
+{
+    <p>
+        Es wurde keine Meldung angegeben!
+    </p>
+}
+else
+{
+    <h3>@Model.Header</h3>
+    <p>@Model.Messagetext</p>
+
+    @if(Model.Solution != null && !Model.Solution.Trim().Equals(""))
+    {
+        <h2>Lösung</h2>
+        <p>@Model.Solution</p>
+    }
+}

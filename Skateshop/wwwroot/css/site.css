@@ -84,6 +84,7 @@ footer {
     width: 220px;
     border: 2px solid #45a29e;
     left: -2px;
+    z-index: 1;
 }
 
     .dropdown-content a {
@@ -216,10 +217,16 @@ body {
 
 .itemImg {
     width: 100%;
-    padding: 5px 0;
     border-top: 1px dashed black;
     border-bottom: 1px dashed black;
+    margin: 1px 0;
 }
+
+    .itemImg:hover {
+        border-top: 2px dashed black;
+        border-bottom: 2px dashed black;
+        margin: 0;
+    }
 
 .source:link, .source:visited {
     font-size: 15px;

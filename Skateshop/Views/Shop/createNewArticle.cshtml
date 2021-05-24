@@ -1,7 +1,45 @@
-﻿
+﻿@model Skateshop.Models.Item 
+
+
 @{
     ViewData["Title"] = "createNewArticle";
 }
 
-<h1>createNewArticle</h1>
+<h1>Neuen Artikel erstellen:</h1>
 
+<form asp-controller="shop" asp-action="createNewArticle" method="post">
+    <label asp-for="Manufacturer">Hersteller *</label>
+    <input asp-for="Manufacturer" /><br />
+    <span asp-validation-for="Manufacturer" class="text-danger" style="font-size:85%"></span><br />
+
+    <label asp-for="Size">Größe </label>
+    <input asp-for="Size" /><br />
+
+    <label asp-for="Image">Pfad zum Bild </label>
+    <input asp-for="Image" /><br />
+    <span class="text-info">
+        Der Pfad zum Bild benutzt als Root-Ordner Skateshop/wwwroot/img/shop<br />
+        Im Feld Image muss der Pfad in dieser Form angegeben werden:<br />
+        <b>kategorie/dateiname</b> (ohne .jpg)
+    </span><br />
+
+    <label asp-for="Price">Preis *</label>
+    <input asp-for="Price" /><br />
+    <span asp-validation-for="Price" class="text-danger" style="font-size:85%"></span><br />
+
+    <label asp-for="Description">Beschreibung *</label>
+    <input asp-for="Description" /><br />
+    <span asp-validation-for="Description" class="text-danger" style="font-size:85%"></span><br />
+
+    <label asp-for="ItemType">Kategorie *</label>
+    <select asp-for="ItemType">
+        <option value="notSpecified">bitte Auswählen</option>
+        <option value="Deck">Deck</option>
+        <option value="Truck">Truck</option>
+        <option value="Wheels">Wheels</option>
+        <option value="Bearings">Bearings</option>
+    </select><br />
+
+    <input type="submit" value="Artikel abspeichern" />
+    <input type="reset" value="Felder zurücksetzen" />
+</form>

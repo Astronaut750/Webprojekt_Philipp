@@ -2,7 +2,22 @@
 @model Item
 
 @{
-    string imagePath = "/img/shop/" + Model.Image;
+    string imagepath = "/img/shop/";
+    string altpath = "";
+    ;
+    if(!string.IsNullOrEmpty(Model.Image))
+    {
+        imagepath += Model.Image;
+        if(Model.ItemType == ItemType.Deck)
+        {
+            altpath = imagepath + "b.jpg";
+        }
+        imagepath += ".jpg";
+    }
+    else
+    {
+        imagepath += "missingImage.png";
+    }
 }
 
 <div class="griditem rounded-sm">
@@ -11,7 +26,7 @@
         @Model.ItemType
     </div>
     <div>
-        <img src="@imagePath" class="itemImg" />
+        <img id="shopItem-@Model.ID" src="@imagepath" class="itemImg" onclick="flipBoard(@Model.ID, '@Model.ItemType', '@imagepath', '@altpath')"/>
     </div>
     <div class="itemPrice itemText">
         @Model.Price EUR
