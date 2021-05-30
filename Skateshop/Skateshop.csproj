@@ -4,6 +4,7 @@
     <TargetFramework>net5.0</TargetFramework>
     <TargetFrameworkIdentifier>.NETCOREAPP</TargetFrameworkIdentifier>
     <TargetFrameworkVersion>5.0</TargetFrameworkVersion>
+    <UserSecretsId>54208620-a762-4c3e-91b1-36e47b77f5b8</UserSecretsId>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
@@ -27,6 +28,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="5.0.6" />
     <PackageReference Include="MySql.Data" Version="8.0.23" />
   </ItemGroup>
 

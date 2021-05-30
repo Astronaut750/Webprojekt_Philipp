@@ -15,21 +15,7 @@ namespace Skateshop.Controllers
 
         public IActionResult Index()
         {
-            try
-            {
-                rep.Open();
-                return View(rep.GetAllItems());
-            }
-            catch(Exception ex)
-            {
-                return View("Message", new Message("Datenbankfehler",
-                           ex.Message,
-                           "Bitte versuchen Sie es später erneut!"));
-            }
-            finally
-            {
-                rep.Close();
-            }
+            return View();
         }
 
         [HttpGet]
@@ -109,6 +95,33 @@ namespace Skateshop.Controllers
                 ModelState.AddModelError(nameof(Item.Description), "Die Beschreibung muss mind. 3 Zeichen lang sein.");
             }
 
+        }
+
+        public JsonResult GetAllItems()
+        {
+            try
+            {
+                rep = new RepositoryItemsDB();
+                rep.Open();
+                List<Item> items = rep.GetAllItems();
+
+                if (items != null)
+                {
+                    return Json(items);
+                }
+                else
+                {
+                    return Json("NoItems");
+                }
+            }
+            catch
+            {
+                return Json("DB Error");
+            }
+            finally
+            {
+                rep.Close();
+            }
         }
     }
 }
