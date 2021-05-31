@@ -1,24 +1,36 @@
-﻿const scene = new THREE.Scene();
+﻿import { GLTFLoader } from "../lib/threeJS/GLTFLoader.js";
+
+let renderBody = document.getElementsByTagName("main")[0];
+renderBody = document.getElementById("logobogo");
+let height = 80;
+
+const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
 
-const renderer = new THREE.WebGLRenderer();
-renderer.setSize(window.innerWidth, window.innerHeight);
-document.body.appendChild(renderer.domElement);
+const camera = new THREE.PerspectiveCamera(75, height / height, 0.1, 1000);
+camera.position.set(0, 0, 7);
 
-const geometry = new THREE.BoxGeometry();
-const material = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
-const cube = new THREE.Mesh(geometry, material);
-scene.add(cube);
+let light = new THREE.HemisphereLight(0xFFFFFF, 0x000000, 2);
+scene.add(light);
 
-camera.position.z = 5;
+const renderer = new THREE.WebGLRenderer({ alpha: true });
+renderer.setSize(height, height);
 
-const animate = function () {
-	requestAnimationFrame(animate);
+renderBody.appendChild(renderer.domElement)
 
-	cube.rotation.x += 0.01;
-	cube.rotation.y += 0.01;
+let loader = new GLTFLoader();
+let model;
+loader.load("./StaticFiles/scene.gltf", gltf => {
+    model = gltf.scene;
+    scene.add(model);
+    model.rotation.z = Math.PI / 4;
+})
 
-	renderer.render(scene, camera);
-};
+function animate() {
+    requestAnimationFrame(animate);
+    model.rotation.y += 0.01;
+    model.position.y = Math.sin(model.rotation.y)
+    renderer.render(scene, camera);
+}
 
 animate();

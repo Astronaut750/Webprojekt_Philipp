@@ -1,6 +1,7 @@
 ﻿<!DOCTYPE html>
 <html lang="de-at">
 <head>
+    <script scr="~/lib/threeJS/three.js"></script>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
@@ -16,7 +17,7 @@
         <main class="rounded-lg">
             @RenderBody()
         </main>
-        <footer>
+        <footer class="rounded-lg">
             <partial name="Footer" />
         </footer>
     </div>
@@ -26,6 +27,7 @@
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 
     <script src="~/js/site.js" asp-append-version="true"></script>
+
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>
