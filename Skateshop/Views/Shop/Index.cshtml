@@ -1,14 +1,13 @@
 ﻿@using Skateshop.Models;
 @namespace Skateshop.Controllers
-@model List<Item>
 
 @{
     ViewData["Title"] = "Index";
 }
 
-<div class="gridcontainer">
-    @foreach (var item in Model)
-    {
-        <partial name="ItemView" model="item" />
-    }
+<div id="shopGrid" class="gridcontainer">
 </div>
+
+@section Scripts {
+    <script src="~/js/ShopIndex.js"></script>
+} 
