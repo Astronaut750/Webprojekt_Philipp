@@ -1,0 +1,24 @@
+﻿#homeIndexContainer {
+    display: grid;
+    position: relative;
+}
+
+#c {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+#buttonGrid {
+    left: 5px;
+    top: 5px;
+    grid-gap: 5px;
+    position: absolute;
+    display: grid;
+    grid-template-rows: 1fr, 1fr, 1fr;
+}
+
+button {
+    display: grid;
+    width: 150px;
+}

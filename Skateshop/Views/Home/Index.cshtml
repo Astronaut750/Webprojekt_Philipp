@@ -3,8 +3,21 @@
 
 }
 
-<div class="container">
+<div id="homeIndexContainer">
+    <canvas id="c"></canvas>
+
+    <div id="buttonGrid">
+        <button id="toggleX" class="btn btn-dark">Toggle X cycle</button>
+        <button id="toggleY" class="btn btn-dark">Toggle Y cycle</button>
+        <button id="toggleZ" class="btn btn-dark">Toggle Z cycle</button>
+    </div>
+    
 </div>
 
-    In eget ante in tellus phar<br />etra rhoncus. Nam pharetra, l<br />ectus vel matt<br />is maximus, mauris sem facilisis lacus, sit<br /> amet mattis ligula nulla non risus. Vivamus vel ullamcorper ante, ut tristique sem. Integer ut augue feugiat, egestas nibh laoreet, gravida metus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aenean sit amet cursus ipsum. Donec pulvinar non tellus et feugiat. Sed est justo, gravida nec erat in, aliquam cursus dolor. Donec posuere aliquam vestibulum. Suspendisse convallis consectetur elit eu lobortis. Sed pellentesque nibh pretium finibus efficitur. Aliquam quis varius turpis, vitae convallis lorem.
-</div>
+@section Scripts {
+    <link rel="stylesheet" href="~/css/HomeIndex.css" />
+    <!--<script src="~/lib/threeJS/three.js"></script>-->
+    <script type="module" src="~/lib/threeJS/GLTFLoader.js"></script>
+    <!--<script type="module" src="~/js/HomeIndex.js" defer></script>-->
+    <script type="module" src="~/js/SkyboxExample.js" defer></script>
+} 
